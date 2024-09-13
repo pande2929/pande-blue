@@ -13,6 +13,7 @@ curl --output-dir "/etc/yum.repos.d/" --remote-name https://copr.fedorainfraclou
 rpm-ostree refresh-md --force
 
 # Install greetd / tuigreet
+rpm-ostree greetd tuigreet
 
 # Install virtualization
 rpm-ostree install virt-manager
