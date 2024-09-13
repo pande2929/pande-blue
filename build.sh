@@ -6,7 +6,7 @@ RELEASE="$(rpm -E %fedora)"
 
 # Install hyprland
 curl --output-dir "/etc/yum.repos.d/" --remote-name https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-40/solopasha-hyprland-fedora-40.repo
-rpm-ostree refresh-md --force
+#rpm-ostree refresh-md --force
 rpm-ostree hyprland waybar flatpak
 
 # Install greetd / tuigreet
