@@ -10,7 +10,7 @@ curl --output-dir "/etc/yum.repos.d/" --remote-name https://copr.fedorainfraclou
 rpm-ostree install hyprland waybar flatpak
 
 # Install greetd / tuigreet
-rpm-ostree greetd tuigreet
+rpm-ostree install greetd tuigreet
 curl --output-dir "/etc/greetd/" --remote-name https://raw.githubusercontent.com/pande2929/pande-blue/main/config.toml
 systemctl enable greetd
 
