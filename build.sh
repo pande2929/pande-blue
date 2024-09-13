@@ -19,5 +19,5 @@ curl --output-dir "/etc/greetd/" --remote-name https://raw.githubusercontent.com
 systemctl enable greetd
 
 # Install virtualization
-rpm-ostree install virt-manager
-systemctl enable libvirtd
+#rpm-ostree install virt-manager
+#systemctl enable libvirtd
