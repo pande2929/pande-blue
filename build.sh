@@ -9,7 +9,6 @@ curl --output-dir "/etc/yum.repos.d/" --remote-name https://copr.fedorainfraclou
 
 # Install our software
 rpm-ostree install hyprland waybar flatpak sddm virt-manager alacritty gamemode vim neovim pavucontrol btop rofi-wayland
-rpm-ostree remove kitty
 
 # Finalize configuration
 systemctl enable sddm
