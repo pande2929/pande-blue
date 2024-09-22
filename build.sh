@@ -4,17 +4,18 @@ set -ouex pipefail
 
 RELEASE="$(rpm -E %fedora)"
 
-# Enable Hyprland
-curl --output-dir "/etc/yum.repos.d/" --remote-name https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-40/solopasha-hyprland-fedora-40.repo
+# Enable fysnc copr
+#curl --output-dir "/etc/yum.repos.d/" --remote-name https://copr.fedorainfracloud.org/coprs/sentry/kernel-fsync/repo/fedora-40/sentry-kernel-fsync-fedora-40.repo
+#echo exclude=kernel* >> /etc/yum.repos.d/fedora-updates
 
-rpm-ostree cleanup -m
+#rpm-ostree cleanup -m
 
 # Install our software
-#rpm-ostree install flatpak sddm virt-manager alacritty gamemode vim neovim #pavucontrol #btop thunar
-rpm-ostree install hyprland-git flatpak sddm virt-manager alacritty gamemode pavucontrol btop rofi-wayland thunar \
-  hyprpaper hyprlock hypridle xdg-desktop-portal-hyprland waybar-git hyprcursor hyprshot \
-  gnu-free-fonts-common gnu-free-mono-fonts gnu-free-sans-fonts gnu-free-serif-fonts
+rpm-ostree install mangohud libtvirtd
 
-# Finalize configuration
-systemctl enable sddm
+# Install fsync kernel
+# https://copr.fedorainfracloud.org/coprs/sentry/kernel-fsync/
+#rpm-ostree override replace --experimental --freeze --from repo='copr:copr.fedorainfracloud.org:sentry:kernel-fsync' kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra
+
+# Complete configuration
 systemctl enable libvirtd
