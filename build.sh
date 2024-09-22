@@ -11,7 +11,7 @@ RELEASE="$(rpm -E %fedora)"
 #rpm-ostree cleanup -m
 
 # Install our software
-rpm-ostree install mangohud libtvirtd
+rpm-ostree install mangohud virt-manager
 
 # Install fsync kernel
 # https://copr.fedorainfracloud.org/coprs/sentry/kernel-fsync/
