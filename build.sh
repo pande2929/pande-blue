@@ -11,7 +11,7 @@ RELEASE="$(rpm -E %fedora)"
 #rpm-ostree cleanup -m
 
 # Install our software
-rpm-ostree install lightdm \
+rpm-ostree install gdm \
 mangohud \
 virt-manager \
 btop \
@@ -59,4 +59,4 @@ xscreensaver-base
 
 # Complete configuration
 systemctl enable libvirtd
-systemctl enable lightdm
+systemctl enable gdm
