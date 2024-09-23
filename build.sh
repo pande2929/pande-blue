@@ -15,6 +15,8 @@ rpm-ostree install gdm \
 mangohud \
 virt-manager \
 btop \
+xorg-x11-drv-nvidia-cuda \
+neovim \
 xfce4-clipman-plugin \
 xfce4-cpugraph-plugin \
 xfce4-datetime-plugin \
@@ -51,8 +53,7 @@ xfconf \
 xfdesktop \
 xfmpc \
 xfwm4 \
-xscreensaver-base \
-xorg-x11-drv-nvidia-cuda
+xscreensaver-base
 
 # Install fsync kernel
 # https://copr.fedorainfracloud.org/coprs/sentry/kernel-fsync/
