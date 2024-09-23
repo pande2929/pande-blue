@@ -26,7 +26,6 @@ rpm-ostree override replace \
     kernel-modules-core \
     kernel-modules-extra \
     kernel-uki-virt \
-    kernel-uname-r \
     kmod-nvidia
 
 # Complete configuration
