@@ -38,24 +38,24 @@ ARG SOURCE_SUFFIX="-main"
 ## SOURCE_TAG arg must be a version built for the specific image: eg, 39, 40, gts, latest
 ARG SOURCE_TAG="latest"
 
-ARG NVIDIA_FLAVOR="nvidia"
-ARG KERNEL_FLAVOR="fsync"
-
-
 ### 2. SOURCE IMAGE
 ## this is a standard Containerfile FROM using the build ARGs above to select the right upstream image
-FROM ghcr.io/ublue-os/akmods-nvidia:${SOURCE_TAG}
 FROM ghcr.io/ublue-os/${SOURCE_IMAGE}${SOURCE_SUFFIX}:${SOURCE_TAG}
 
 ### 3. MODIFICATIONS
 ## make modifications desired in your image and install packages by modifying the build.sh script
 ## the following RUN directive does all the things required to run "build.sh" as recommended.
 
+COPY --from=ghcr.io/ublue-os/akmods-nvidia:fsync-40 /rpms/ /tmp/rpms
+RUN find /tmp/rpms && ostree container commit
+RUN rpm-ostree install /tmp/rpms/ublue-os/ublue-os-nvidia*.rpm && ostree container commit
+
 COPY build.sh /tmp/build.sh
 
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
     ostree container commit
+
 ## NOTES:
 # - /var/lib/alternatives is required to prevent failure with some RPM installs
 # - All RUN commands must end with ostree container commit
