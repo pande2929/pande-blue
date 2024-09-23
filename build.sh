@@ -15,33 +15,25 @@ rpm-ostree install lightdm \
 mangohud \
 virt-manager \
 btop \
-xfce4-cddrive-plugin \
-xfce4-cellmodem-plugin \
 xfce4-clipman-plugin \
 xfce4-cpugraph-plugin \
 xfce4-datetime-plugin \
 xfce4-dict \
 xfce4-dict-plugin \
 xfce4-diskperf-plugin \
-xfce4-doc \
 xfce4-eyes-plugin \
 xfce4-fsguard-plugin \
 xfce4-genmon-plugin \
-xfce4-icon-theme \
 xfce4-mailwatch-plugin \
-xfce4-mixer \
-xfce4-modemlights-plugin \
 xfce4-mount-plugin \
 xfce4-mpc-plugin \
 xfce4-netload-plugin \
 xfce4-notes-plugin \
 xfce4-places-plugin \
 xfce4-power-manager \
-xfce4-quicklauncher-plugin \
 xfce4-screenshooter \
 xfce4-screenshooter-plugin \
 xfce4-sensors-plugin \
-xfce4-session-engines \
 xfce4-smartbookmark-plugin \
 xfce4-systemload-plugin \
 xfce4-taskmanager \
@@ -50,8 +42,6 @@ xfce4-timer-plugin \
 xfce4-verve-plugin \
 xfce4-wavelan-plugin \
 xfce4-weather-plugin \
-xfce4-websearch-plugin \
-xfce4-xfswitch-plugin \
 xfce4-xkb-plugin \
 orage \
 parole \
@@ -60,7 +50,6 @@ xfce4-volumed \
 xfconf \
 xfdesktop \
 xfmpc \
-xfprint \
 xfwm4 \
 xscreensaver-base
 
