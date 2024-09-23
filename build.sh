@@ -8,7 +8,8 @@ RELEASE="$(rpm -E %fedora)"
 rpm-ostree install mangohud \
 virt-manager \
 btop \
-neovim
+neovim \
+akmod-nvidia
 
 # Install fsync kernel
 # https://copr.fedorainfracloud.org/coprs/sentry/kernel-fsync/
@@ -25,8 +26,7 @@ rpm-ostree override replace \
     kernel-modules \
     kernel-modules-core \
     kernel-modules-extra \
-    kernel-uki-virt \
-    kmod-nvidia
+    kernel-uki-virt
 
 # Complete configuration
 systemctl enable libvirtd
