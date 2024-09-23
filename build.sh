@@ -11,7 +11,7 @@ echo exclude=kernel* >> /etc/yum.repos.d/fedora-updates
 #rpm-ostree cleanup -m
 
 # Install our software
-rpm-ostree install mangohud virt-manager btop
+rpm-ostree install mangohud virt-manager btop akmod-nvidia-cuda
 
 # Install fsync kernel
 # https://copr.fedorainfracloud.org/coprs/sentry/kernel-fsync/
