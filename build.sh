@@ -11,9 +11,8 @@ RELEASE="$(rpm -E %fedora)"
 #rpm-ostree cleanup -m
 
 # Install our software
-rpm-ostree install mangohud virt-manager btop akmod-nvidia xorg-x11-drv-nvidia
+rpm-ostree install mangohud virt-manager btop akmod-nvidia xorg-x11-drv-nvidia-cuda
 #rpm-ostree kargs --append=rd.driver.blacklist=nouveau --append=modprobe.blacklist=nouveau --append=nvidia-drm.modeset=1
-ujust configure-nvidia kargs
 
 # Install fsync kernel
 # https://copr.fedorainfracloud.org/coprs/sentry/kernel-fsync/
