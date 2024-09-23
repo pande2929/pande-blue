@@ -4,12 +4,6 @@ set -ouex pipefail
 
 RELEASE="$(rpm -E %fedora)"
 
-# Enable fysnc copr
-#curl --output-dir "/etc/yum.repos.d/" --remote-name https://copr.fedorainfracloud.org/coprs/sentry/kernel-fsync/repo/fedora-40/sentry-kernel-fsync-fedora-40.repo
-#echo exclude=kernel* >> /etc/yum.repos.d/fedora-updates
-
-#rpm-ostree cleanup -m
-
 # Install our software
 rpm-ostree install mangohud \
 virt-manager \
@@ -18,20 +12,19 @@ neovim
 
 # Install fsync kernel
 # https://copr.fedorainfracloud.org/coprs/sentry/kernel-fsync/
-#rpm-ostree override replace --experimental --freeze --from repo='copr:copr.fedorainfracloud.org:sentry:kernel-fsync' kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra kernel-devel
-curl -LsSf -o /etc/yum.repos.d/_copr_sentry-kernel-fsync.repo \
-    https://copr.fedorainfracloud.org/coprs/sentry/kernel-fsync/repo/fedora-$(rpm -E %fedora)/sentry-kernel-fsync-fedora-$(rpm -E %fedora).repo
-rpm-ostree cliwrap install-to-root /
-rpm-ostree override replace \
---experimental \
---from repo=copr:copr.fedorainfracloud.org:sentry:kernel-fsync \
-    kernel \
-    kernel-core \
-    kernel-devel \
-    kernel-devel-matched \
-    kernel-modules \
-    kernel-modules-core \
-    kernel-modules-extra
+#curl -LsSf -o /etc/yum.repos.d/_copr_sentry-kernel-fsync.repo \
+    #https://copr.fedorainfracloud.org/coprs/sentry/kernel-fsync/repo/fedora-$(rpm -E %fedora)/sentry-kernel-fsync-fedora-$(rpm -E %fedora).repo
+#rpm-ostree cliwrap install-to-root /
+#rpm-ostree override replace \
+#--experimental \
+#--from repo=copr:copr.fedorainfracloud.org:sentry:kernel-fsync \
+    #kernel \
+    #kernel-core \
+    #kernel-devel \
+    #kernel-devel-matched \
+    #kernel-modules \
+    #kernel-modules-core \
+    #kernel-modules-extra
 
 # Complete configuration
 systemctl enable libvirtd
