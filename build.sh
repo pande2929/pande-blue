@@ -10,9 +10,6 @@ virt-manager \
 btop \
 neovim 
 
-rpm-ostree install /tmp/rpms/ublue-os/ublue-os-nvidia*.rpm
-rpm-ostree install /tmp/rpms/kmods/kmod-nvidia*.rpm
-
 # Install fsync kernel
 # https://copr.fedorainfracloud.org/coprs/sentry/kernel-fsync/
 curl -LsSf -o /etc/yum.repos.d/_copr_sentry-kernel-fsync.repo \
@@ -29,6 +26,10 @@ rpm-ostree override replace \
     kernel-modules-core \
     kernel-modules-extra \
     kernel-uki-virt
+
+# Install Nvidia
+rpm-ostree install /tmp/rpms/ublue-os/ublue-os-nvidia*.rpm
+rpm-ostree install /tmp/rpms/kmods/kmod-nvidia*.rpm
 
 # Complete configuration
 systemctl enable libvirtd
