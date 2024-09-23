@@ -8,10 +8,7 @@ RELEASE="$(rpm -E %fedora)"
 rpm-ostree install mangohud \
 virt-manager \
 btop \
-neovim \
-akmod-nvidia
-
-rpm-ostree override remove kmod-nvidia
+neovim 
 
 # Install fsync kernel
 # https://copr.fedorainfracloud.org/coprs/sentry/kernel-fsync/
