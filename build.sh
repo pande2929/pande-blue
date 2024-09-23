@@ -25,7 +25,9 @@ rpm-ostree override replace \
     kernel-modules \
     kernel-modules-core \
     kernel-modules-extra \
-    kernel-uki-virt
+    kernel-uki-virt \
+    kernel-uname-r \
+    kmod-nvidia
 
 # Complete configuration
 systemctl enable libvirtd
