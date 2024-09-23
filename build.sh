@@ -51,7 +51,8 @@ xfconf \
 xfdesktop \
 xfmpc \
 xfwm4 \
-xscreensaver-base
+xscreensaver-base \
+xorg-x11-drv-nvidia-cuda
 
 # Install fsync kernel
 # https://copr.fedorainfracloud.org/coprs/sentry/kernel-fsync/
