@@ -11,8 +11,7 @@ RELEASE="$(rpm -E %fedora)"
 #rpm-ostree cleanup -m
 
 # Install our software
-rpm-ostree install \ 
-lightdm \
+rpm-ostree install lightdm \
 mangohud \
 virt-manager \
 btop \
