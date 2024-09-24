@@ -8,7 +8,8 @@ RELEASE="$(rpm -E %fedora)"
 rpm-ostree install mangohud \
 virt-manager \
 btop \
-neovim 
+neovim \
+gnome-software
 
 # Install fsync kernel
 # https://copr.fedorainfracloud.org/coprs/sentry/kernel-fsync/
