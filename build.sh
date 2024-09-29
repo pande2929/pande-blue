@@ -10,6 +10,7 @@ virt-manager \
 btop \
 neovim \
 gnome-software \
+gnome-disk-utility \
 xinput
 
 # Install fsync kernel
