@@ -32,5 +32,8 @@ rpm-ostree override replace \
 rpm-ostree install /tmp/rpms/ublue-os/ublue-os-nvidia*.rpm
 rpm-ostree install /tmp/rpms/kmods/kmod-nvidia*.rpm
 
+# Remove Firefox (we will install with Flathub)
+rpm-ostree override remove firefox firefox-langpacks
+
 # Complete configuration
 systemctl enable libvirtd
