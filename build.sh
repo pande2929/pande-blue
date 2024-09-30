@@ -11,7 +11,8 @@ btop \
 neovim \
 gnome-software \
 gnome-disk-utility \
-xinput
+xinput \
+alacritty
 
 # Install fsync kernel
 # https://copr.fedorainfracloud.org/coprs/sentry/kernel-fsync/
