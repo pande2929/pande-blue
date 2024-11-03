@@ -8,7 +8,7 @@ RELEASE="$(rpm -E %fedora)"
 rpm-ostree install mangohud \
 virt-manager \
 btop \
-neovim \
+neovim #\
 #gnome-software \
 #gnome-disk-utility \
 #xinput \
